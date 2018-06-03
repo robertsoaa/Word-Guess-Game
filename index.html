@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Word Guess Game</title>
+        
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <audio autoplay>
+                <source src="assets/music/Snooglebum - Last Train Home.mp3" type="audio/mp3">
+                    </audio>
+      
+    </head>
+    <body>
+        <center>
+       
+              <h1 class="display-4">Word Guess Game</h1>
+              <h2 class="lead">This game gives you 20 tries to guess the word below by choosing letters in the word.</h2>
+          
+        
+        <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">Middle</button>
+                <button type="button" button id = "reset" class="btn btn-secondary">Reset</button>
+        </div>    
+            
+        <h1 id="game"></h1>
+        <h2 id="usergamestate"></h2>
+        <p id="correctword"></p>
+        <input type="text" id="letter" style="width:48px; height:48px;"></input>
+        <div class="container"><h2 id="user-text"></h2></div></center>
+        
+    
+
+        <script type="text/javascript">
+            // Provides the var for the userText that displays the user's previously selected letters.
+            var userText = document.getElementById("user-text");
+      
+            // Provides the JavaScript function to display the characters the user already selected.
+            document.onkeyup = function(event) {
+                userText.textContent = userText.textContent + event.key;
+                
+            };
+
+            function myFunction() {
+            var x = document.getElementById("letter");
+            x.value = x.value.toUpperCase();
+            }
+        </script>
+    
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    </body>
+
+
+</html>
