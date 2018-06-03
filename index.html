@@ -16,15 +16,17 @@
               <h2 class="lead">This game gives you 20 tries to guess the word below by choosing letters in the word.</h2>
           
         
-        <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary">Middle</button>
-                <button type="button" button id = "reset" class="btn btn-secondary">Reset</button>
-        </div>    
+        
+                <button type="button" button id = "start" class="button" onclick="location.href='index.html';""getfocus()">Start</button>
+                <button type="button" button id = "reset" class="button" onclick="location.href='index.html';")>Reset</button>
+            
             
         <h1 id="game"></h1>
         <h2 id="usergamestate"></h2>
         <p id="correctword"></p>
-        <input type="text" id="letter" style="width:48px; height:48px;"></input>
+        <input type="text" id="letter" style="width:48px; height:48px;" autofocus></input>
+        <br><br>
+        <h3>Previously Selected Letters</h3>
         <div class="container"><h2 id="user-text"></h2></div></center>
         
     
@@ -35,13 +37,16 @@
       
             // Provides the JavaScript function to display the characters the user already selected.
             document.onkeyup = function(event) {
-                userText.textContent = userText.textContent + event.key;
+                userText.textContent = userText.textContent + event.key + " ";
                 
             };
 
             function myFunction() {
             var x = document.getElementById("letter");
             x.value = x.value.toUpperCase();
+            }
+            function getfocus() {
+            document.getElementById("letter").focus();
             }
         </script>
     

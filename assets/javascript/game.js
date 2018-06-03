@@ -6,11 +6,12 @@ var $ = function (id) {
 var wordChoice1 = ["JANUARY", "FEBRUARY", "MARCH", "APRIL","MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER","DECEMBER"]
 var wordChoice2 = ["SHREWDNESS","CETE","CAULDRON","SLEUTH","OBSTINACY","CLOWDER","LITTER","PACE","PARADE","GANG","BUSINESS","LEASH","TOWER","TRIBE","BAND","BLOAT","CACKLE","TROOP","PRICKLE","AMBUSH","POD","PACK"]
 var wordChoice3 = ["SEDGE","WAKE","CHAIN","COVER","GULP","MURDER","TRIP","DULE","CONVOCATION","CHARM","STAND","FLOCK","CAST","PARTY","BUILDING","HOST","DESCENT"]
+var wordChoice4 = ["AMERICA", "RUSSIA", "UKRAINE", "AFGHANISTAN","ALBANIA","ALGERIA","ANGOLA","ARGENTINA","GUYANA","VIETNAM","MONACO","MEXICO","CANADA","SAUDI ARABIA","MALTA","POLAND","SYRIA"]
 
 //declare category choice categories as 'catChoices'
-var catChoices = ["wordChoice1","wordChoice2","wordChoice3"]
-//randomly select a category for focus by its index number...also assumes total category count is always three
-var catChoicesIndex = Math.floor(Math.random()*3);
+var catChoices = ["wordChoice1","wordChoice2","wordChoice3","wordChoice4"]
+//randomly select a category for focus by its index number...(also assumes total category count is always FOUR)
+var catChoicesIndex = Math.floor(Math.random()*4);
 var catChoice = catChoices[catChoicesIndex];
 console.log(catChoice);
 
@@ -29,6 +30,11 @@ else if (catChoice === "wordChoice2") {
 else if(catChoice === "wordChoice3") {
     var wordChoiceIndex = Math.floor(Math.random()*(wordChoice3.length));
     var wordChoiceChoice = wordChoice3[wordChoiceIndex];
+    console.log(wordChoiceChoice);
+}
+else if(catChoice === "wordChoice4") {
+    var wordChoiceIndex = Math.floor(Math.random()*(wordChoice4.length));
+    var wordChoiceChoice = wordChoice4[wordChoiceIndex];
     console.log(wordChoiceChoice);
 }
 //get the character length of the chosen word and store in myLength
