@@ -151,7 +151,9 @@ var submit = function()
     }
     else if (attemptsLeft < 1)
     {
-        document.getElementById("usergamestate").innerHTML = "YOU LOSE!!! The correct word was: ";
+        document.getElementById("usergamestate").innerHTML = "YOU LOSE!!!";
+        document.getElementById("usergamestateComment").innerHTML = "The correct word was: ";
+    
         document.getElementById("correctword").innerHTML = wordChoiceChoice;
         document.getElementById("letter").disabled = true;
 
