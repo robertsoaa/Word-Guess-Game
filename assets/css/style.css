@@ -14,11 +14,20 @@ h2{
     font-size: 48px;
     color: aliceblue;
 }
+#winCount{
+    background: #4CAF50;
+    border-style: inset;
+    border-width: 4px;
+    height: 48px;
+    width: 48px;
+    font-size: 48px;
+    color: black;
+}
 .container {
     width: 400px;
     height: 400px;
-    background: white;
-    border-style: solid;
+    background: gray;
+    border-style: inset;
     border-width: 1px;
     word-wrap: break-word;
 }
@@ -42,4 +51,12 @@ input[type="text"] {
 .button:hover {
     background-color: #4CAF50; /* Green */
     color: white;
+}
+#letter {
+    background: #4CAF50;
+    border-style: inset;
+    border-width: 4px;
+}
+#hintArea{
+    visibility: hidden;
 }
