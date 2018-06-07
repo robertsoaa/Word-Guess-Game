@@ -72,7 +72,7 @@ var winCount = 0;
 //declare the var to play the sound file
 var m = document.getElementById("winnerSound");
 
-//get the game title to randomly change letter colors
+//get the game title to randomly change letter colors...not finished yet
 var titleColorChange =  "Word Guess Game";
 var titleLettersSplit = titleColorChange.split('');
 console.log(titleLettersSplit);
@@ -81,12 +81,18 @@ var hintButtonVisble = function(){
     document.getElementById("hintArea").style.visibility = "visible";
 }
 
+//not sure how to store the win count from a previous session yet
+var winCount = function(){
+    
+}
+
+//tried to get the game title letters to randomly chnge colors with this function but not finished yet...
 var titleColorChanger = function(){
 
     //loop back on function the same length as character count
     for (var i=0; i< titleLettersSplit.length; i++)
     {
-    //randomly select the index of the character so I can later change that characters font-color
+    //randomly select the index of the character so I can later change that characters font-color..not finished yet
     var titleIndex = Math.floor(Math.random()*(titleLettersSplit.length));
     console.log(titleIndex);
     titleLettersSplit[titleIndex].fontcolor("green");
@@ -138,6 +144,7 @@ var submit = function()
     if (win<1)
     {
         document.getElementById("usergamestate").innerHTML = "YOU WIN!!!";
+        //increments the win counter
         winCount++;
         document.getElementById("winCount").innerHTML = winCount;
 
